@@ -23,7 +23,7 @@ class GroupDetailViewController: UIViewController, WKUIDelegate, WKNavigationDel
         super.viewDidLoad()
         
  
-        let myURL = URL(string: "https://www.apple.com")
+        let myURL = URL(string: "http://weebee1212.com/sp/dantai/content.php?id=1")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
 

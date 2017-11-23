@@ -31,5 +31,32 @@ class SettingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+//    enum SettingsCellType {
+//        case notification
+//        case sns
+//        case showWeb(String)
+//        case regulation
+//        
+//        init(title: String) {
+//            switch title {
+//            case "お知らせ":
+//                self = .notification
+//                
+//            case "利用規約":
+//                self = .regulation
+//                
+//                
+//            case "運営会社":
+//                self = .showWeb("http://candle.co.jp/")
+//                
+//            default:
+//                self = .sns
+//            }
+//        }
+//    }
+//    
+//    fileprivate let kSettingItems = [ "今後の予定" ,"ろっコードについて", "募集要項" , "協賛" ]
 }
+
+
