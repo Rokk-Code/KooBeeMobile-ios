@@ -10,10 +10,13 @@ import Foundation
 
 struct Group{
     let name: String
-    let cathegory: Int
+    let thumbURL: String
+    let cathegory: String
     let link: String
     let twitterLink: String
-    let fbLink: String
-    let hpLink: String
-    // article
+    let facebookLink: String
+    
+//    init() {
+//        
+//    }
 }

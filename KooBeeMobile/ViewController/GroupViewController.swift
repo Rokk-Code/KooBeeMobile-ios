@@ -15,7 +15,7 @@ class GroupViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        tableView.register(UINib(nibName: "GroupeTableViewCell", bundle: nil), forCellReuseIdentifier: "GroupeTableViewCell")
+        tableView.register(UINib(nibName: "GroupTableViewCell", bundle: nil), forCellReuseIdentifier: "GroupTableViewCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +42,7 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource  {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: GroupeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "GroupeTableViewCell", for: indexPath) as! GroupeTableViewCell
+        let cell: GroupTableViewCell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCell", for: indexPath) as! GroupTableViewCell
         cell.bindData()
         
         return cell

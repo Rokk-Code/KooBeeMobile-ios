@@ -14,14 +14,15 @@
 		540386521FC56FCD007FDDF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540386501FC56FCD007FDDF1 /* LaunchScreen.storyboard */; };
 		5403865B1FC5700C007FDDF1 /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5403865A1FC5700C007FDDF1 /* Group.storyboard */; };
 		5403865E1FC57038007FDDF1 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403865D1FC57038007FDDF1 /* GroupViewController.swift */; };
-		540386621FC57109007FDDF1 /* GroupeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540386601FC57109007FDDF1 /* GroupeTableViewCell.swift */; };
-		540386631FC57109007FDDF1 /* GroupeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540386611FC57109007FDDF1 /* GroupeTableViewCell.xib */; };
+		540386621FC57109007FDDF1 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540386601FC57109007FDDF1 /* GroupTableViewCell.swift */; };
+		540386631FC57109007FDDF1 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540386611FC57109007FDDF1 /* GroupTableViewCell.xib */; };
 		540386661FC572F0007FDDF1 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540386651FC572F0007FDDF1 /* Group.swift */; };
 		540386691FC57401007FDDF1 /* GroupDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 540386681FC57401007FDDF1 /* GroupDetail.storyboard */; };
 		5403866B1FC57526007FDDF1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403866A1FC57526007FDDF1 /* MainTabBarController.swift */; };
 		5403866D1FC57583007FDDF1 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5403866C1FC57583007FDDF1 /* Setting.storyboard */; };
 		5403866F1FC575BC007FDDF1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403866E1FC575BC007FDDF1 /* SettingViewController.swift */; };
 		540386711FC57761007FDDF1 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540386701FC57761007FDDF1 /* GroupDetailViewController.swift */; };
+		54AAE95E1FCAD88A004C5CB4 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AAE95D1FCAD88A004C5CB4 /* GroupViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,14 +35,15 @@
 		540386531FC56FCD007FDDF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5403865A1FC5700C007FDDF1 /* Group.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Group.storyboard; sourceTree = "<group>"; };
 		5403865D1FC57038007FDDF1 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
-		540386601FC57109007FDDF1 /* GroupeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupeTableViewCell.swift; sourceTree = "<group>"; };
-		540386611FC57109007FDDF1 /* GroupeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupeTableViewCell.xib; sourceTree = "<group>"; };
+		540386601FC57109007FDDF1 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		540386611FC57109007FDDF1 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
 		540386651FC572F0007FDDF1 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		540386681FC57401007FDDF1 /* GroupDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupDetail.storyboard; sourceTree = "<group>"; };
 		5403866A1FC57526007FDDF1 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5403866C1FC57583007FDDF1 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		5403866E1FC575BC007FDDF1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		540386701FC57761007FDDF1 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
+		54AAE95D1FCAD88A004C5CB4 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		540386461FC56FCC007FDDF1 /* KooBeeMobile */ = {
 			isa = PBXGroup;
 			children = (
+				54AAE95C1FCAD874004C5CB4 /* ViewModel */,
 				540386641FC572D1007FDDF1 /* Model */,
 				5403865F1FC570E8007FDDF1 /* TableViewCell */,
 				5403865C1FC57013007FDDF1 /* Storyboard */,
@@ -112,8 +115,8 @@
 		5403865F1FC570E8007FDDF1 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				540386601FC57109007FDDF1 /* GroupeTableViewCell.swift */,
-				540386611FC57109007FDDF1 /* GroupeTableViewCell.xib */,
+				540386601FC57109007FDDF1 /* GroupTableViewCell.swift */,
+				540386611FC57109007FDDF1 /* GroupTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -124,6 +127,14 @@
 				540386651FC572F0007FDDF1 /* Group.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		54AAE95C1FCAD874004C5CB4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				54AAE95D1FCAD88A004C5CB4 /* GroupViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				540386521FC56FCD007FDDF1 /* LaunchScreen.storyboard in Resources */,
-				540386631FC57109007FDDF1 /* GroupeTableViewCell.xib in Resources */,
+				540386631FC57109007FDDF1 /* GroupTableViewCell.xib in Resources */,
 				5403866D1FC57583007FDDF1 /* Setting.storyboard in Resources */,
 				5403864F1FC56FCD007FDDF1 /* Assets.xcassets in Resources */,
 				540386691FC57401007FDDF1 /* GroupDetail.storyboard in Resources */,
@@ -204,7 +215,8 @@
 			files = (
 				5403865E1FC57038007FDDF1 /* GroupViewController.swift in Sources */,
 				540386711FC57761007FDDF1 /* GroupDetailViewController.swift in Sources */,
-				540386621FC57109007FDDF1 /* GroupeTableViewCell.swift in Sources */,
+				54AAE95E1FCAD88A004C5CB4 /* GroupViewModel.swift in Sources */,
+				540386621FC57109007FDDF1 /* GroupTableViewCell.swift in Sources */,
 				5403866B1FC57526007FDDF1 /* MainTabBarController.swift in Sources */,
 				5403864A1FC56FCC007FDDF1 /* ViewController.swift in Sources */,
 				540386661FC572F0007FDDF1 /* Group.swift in Sources */,
