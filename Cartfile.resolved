@@ -1,0 +1,5 @@
+github "SwiftyJSON/SwiftyJSON" "4.0.0"
+github "Thomvis/BrightFutures" "6.0.0"
+github "antitypical/Result" "3.2.4"
+github "ishkawa/APIKit" "3.1.2"
+github "rs/SDWebImage" "4.2.2"

@@ -1,0 +1,4 @@
+github "rs/SDWebImage"
+github "ishkawa/APIKit"
+github "Thomvis/BrightFutures"
+github "SwiftyJSON/SwiftyJSON"
