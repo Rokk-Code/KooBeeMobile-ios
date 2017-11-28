@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
+class SettingViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,32 +31,16 @@ class SettingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+ fileprivate let kSettingsItems = [ "お知らせ&今後の機能について", "開発者情報", "知るカフェ" ]
     
-//    enum SettingsCellType {
-//        case notification
-//        case sns
-//        case showWeb(String)
-//        case regulation
-//        
-//        init(title: String) {
-//            switch title {
-//            case "お知らせ":
-//                self = .notification
-//                
-//            case "利用規約":
-//                self = .regulation
-//                
-//                
-//            case "運営会社":
-//                self = .showWeb("http://candle.co.jp/")
-//                
-//            default:
-//                self = .sns
-//            }
-//        }
-//    }
-//    
-//    fileprivate let kSettingItems = [ "今後の予定" ,"ろっコードについて", "募集要項" , "協賛" ]
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return kSettingsItems.count
+    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 }
-
-

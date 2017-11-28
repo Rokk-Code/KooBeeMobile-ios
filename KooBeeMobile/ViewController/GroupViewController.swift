@@ -11,8 +11,22 @@ import UIKit
 class GroupViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var viewmodel = GroupViewModel()
+    
+    private var groups: [Group] {
+        get {
+            return viewmodel.groups
+        }
+        set(newValue) {
+            viewmodel.groups = newValue
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        load()
 
         // Do any additional setup after loading the view.
         tableView.register(UINib(nibName: "GroupTableViewCell", bundle: nil), forCellReuseIdentifier: "GroupTableViewCell")
@@ -21,6 +35,21 @@ class GroupViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func load() {
+        let params: [String: Any] = [
+            "name" : "あああ",
+        ]
+        viewmodel.fetchGroups(params: params)
+            .onSuccess { [weak self] data in
+                self?.groups = data.groups
+                self?.tableView.reloadData()
+            }
+            .onFailure { [weak self] error in
+                // self?.showErrorAlert(error.localizedDescription, completion: nil
+        }
+
     }
     
 
@@ -38,12 +67,14 @@ class GroupViewController: UIViewController {
 
 extension GroupViewController: UITableViewDelegate, UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        print(groups.count)
+        return groups.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: GroupTableViewCell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCell", for: indexPath) as! GroupTableViewCell
-        cell.bindData()
+        cell.bindData(group: groups[indexPath.row])
         
         return cell
     }
@@ -51,6 +82,7 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource  {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard: UIStoryboard = UIStoryboard(name: "GroupDetail", bundle: nil)
         if let nextVC: GroupDetailViewController = storyboard.instantiateViewController(withIdentifier: "GroupDetailViewController") as? GroupDetailViewController {
+            nextVC.group = groups[indexPath.row]
             navigationController?.pushViewController(nextVC, animated: true)
         }
         

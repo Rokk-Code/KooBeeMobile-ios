@@ -23,6 +23,16 @@
 		5403866F1FC575BC007FDDF1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403866E1FC575BC007FDDF1 /* SettingViewController.swift */; };
 		540386711FC57761007FDDF1 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540386701FC57761007FDDF1 /* GroupDetailViewController.swift */; };
 		54AAE95E1FCAD88A004C5CB4 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AAE95D1FCAD88A004C5CB4 /* GroupViewModel.swift */; };
+		54B4CFFF1FCC09160021C03B /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B4CFFD1FCC09160021C03B /* SettingTableViewCell.swift */; };
+		54B4D0001FCC09160021C03B /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54B4CFFE1FCC09160021C03B /* SettingTableViewCell.xib */; };
+		54B53B3D1FCBAE1000FB655A /* HerokuRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B53B3C1FCBAE0F00FB655A /* HerokuRequest.swift */; };
+		54B53B3F1FCBAE5500FB655A /* GetGroupesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B53B3E1FCBAE5500FB655A /* GetGroupesRequest.swift */; };
+		54B53B451FCBAF4900FB655A /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B53B421FCBAF4900FB655A /* SDWebImage.framework */; };
+		54B53B461FCBAF4900FB655A /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B53B431FCBAF4900FB655A /* APIKit.framework */; };
+		54B53B471FCBAF4900FB655A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B53B441FCBAF4900FB655A /* Result.framework */; };
+		54B53B491FCBB04200FB655A /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B53B481FCBB04200FB655A /* BrightFutures.framework */; };
+		54B53B4C1FCBB0AC00FB655A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B53B4B1FCBB0AC00FB655A /* APIManager.swift */; };
+		54B53B501FCBB20A00FB655A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B53B4F1FCBB20A00FB655A /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +54,17 @@
 		5403866E1FC575BC007FDDF1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		540386701FC57761007FDDF1 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
 		54AAE95D1FCAD88A004C5CB4 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		54B4CFFD1FCC09160021C03B /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		54B4CFFE1FCC09160021C03B /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		54B53B3C1FCBAE0F00FB655A /* HerokuRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerokuRequest.swift; sourceTree = "<group>"; };
+		54B53B3E1FCBAE5500FB655A /* GetGroupesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupesRequest.swift; sourceTree = "<group>"; };
+		54B53B421FCBAF4900FB655A /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		54B53B431FCBAF4900FB655A /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		54B53B441FCBAF4900FB655A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		54B53B481FCBB04200FB655A /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
+		54B53B4B1FCBB0AC00FB655A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		54B53B4D1FCBB1FD00FB655A /* SwiftyJSON.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyJSON.framework.dSYM; path = Carthage/Build/iOS/SwiftyJSON.framework.dSYM; sourceTree = "<group>"; };
+		54B53B4F1FCBB20A00FB655A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +72,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B53B501FCBB20A00FB655A /* SwiftyJSON.framework in Frameworks */,
+				54B53B491FCBB04200FB655A /* BrightFutures.framework in Frameworks */,
+				54B53B451FCBAF4900FB655A /* SDWebImage.framework in Frameworks */,
+				54B53B461FCBAF4900FB655A /* APIKit.framework in Frameworks */,
+				54B53B471FCBAF4900FB655A /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +88,7 @@
 			children = (
 				540386461FC56FCC007FDDF1 /* KooBeeMobile */,
 				540386451FC56FCC007FDDF1 /* Products */,
+				54B53B411FCBAF4800FB655A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +103,8 @@
 		540386461FC56FCC007FDDF1 /* KooBeeMobile */ = {
 			isa = PBXGroup;
 			children = (
+				54B53B4A1FCBB09B00FB655A /* Utils */,
+				54B53B3B1FCBADE600FB655A /* Request */,
 				54AAE95C1FCAD874004C5CB4 /* ViewModel */,
 				540386641FC572D1007FDDF1 /* Model */,
 				5403865F1FC570E8007FDDF1 /* TableViewCell */,
@@ -117,6 +146,8 @@
 			children = (
 				540386601FC57109007FDDF1 /* GroupTableViewCell.swift */,
 				540386611FC57109007FDDF1 /* GroupTableViewCell.xib */,
+				54B4CFFD1FCC09160021C03B /* SettingTableViewCell.swift */,
+				54B4CFFE1FCC09160021C03B /* SettingTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -137,6 +168,36 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		54B53B3B1FCBADE600FB655A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				54B53B3C1FCBAE0F00FB655A /* HerokuRequest.swift */,
+				54B53B3E1FCBAE5500FB655A /* GetGroupesRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		54B53B411FCBAF4800FB655A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54B53B4F1FCBB20A00FB655A /* SwiftyJSON.framework */,
+				54B53B4D1FCBB1FD00FB655A /* SwiftyJSON.framework.dSYM */,
+				54B53B481FCBB04200FB655A /* BrightFutures.framework */,
+				54B53B431FCBAF4900FB655A /* APIKit.framework */,
+				54B53B441FCBAF4900FB655A /* Result.framework */,
+				54B53B421FCBAF4900FB655A /* SDWebImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54B53B4A1FCBB09B00FB655A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				54B53B4B1FCBB0AC00FB655A /* APIManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +208,7 @@
 				540386401FC56FCC007FDDF1 /* Sources */,
 				540386411FC56FCC007FDDF1 /* Frameworks */,
 				540386421FC56FCC007FDDF1 /* Resources */,
+				54B53B401FCBAF3100FB655A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -198,6 +260,7 @@
 			files = (
 				540386521FC56FCD007FDDF1 /* LaunchScreen.storyboard in Resources */,
 				540386631FC57109007FDDF1 /* GroupTableViewCell.xib in Resources */,
+				54B4D0001FCC09160021C03B /* SettingTableViewCell.xib in Resources */,
 				5403866D1FC57583007FDDF1 /* Setting.storyboard in Resources */,
 				5403864F1FC56FCD007FDDF1 /* Assets.xcassets in Resources */,
 				540386691FC57401007FDDF1 /* GroupDetail.storyboard in Resources */,
@@ -208,16 +271,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54B53B401FCBAF3100FB655A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		540386401FC56FCC007FDDF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B53B4C1FCBB0AC00FB655A /* APIManager.swift in Sources */,
+				54B53B3F1FCBAE5500FB655A /* GetGroupesRequest.swift in Sources */,
 				5403865E1FC57038007FDDF1 /* GroupViewController.swift in Sources */,
 				540386711FC57761007FDDF1 /* GroupDetailViewController.swift in Sources */,
 				54AAE95E1FCAD88A004C5CB4 /* GroupViewModel.swift in Sources */,
+				54B53B3D1FCBAE1000FB655A /* HerokuRequest.swift in Sources */,
 				540386621FC57109007FDDF1 /* GroupTableViewCell.swift in Sources */,
 				5403866B1FC57526007FDDF1 /* MainTabBarController.swift in Sources */,
+				54B4CFFF1FCC09160021C03B /* SettingTableViewCell.swift in Sources */,
 				5403864A1FC56FCC007FDDF1 /* ViewController.swift in Sources */,
 				540386661FC572F0007FDDF1 /* Group.swift in Sources */,
 				5403866F1FC575BC007FDDF1 /* SettingViewController.swift in Sources */,
@@ -360,6 +448,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EA3VP7SXZ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = KooBeeMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rokkocode.KooBeeMobile;
@@ -375,6 +467,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EA3VP7SXZ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = KooBeeMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rokkocode.KooBeeMobile;

@@ -13,6 +13,8 @@ class GroupDetailViewController: UIViewController, WKUIDelegate, WKNavigationDel
     
     @IBOutlet weak var webView: WKWebView!
     
+    var group: Group?
+    
     override func loadView() {
         super.loadView()
         self.webView.uiDelegate = self
@@ -22,16 +24,11 @@ class GroupDetailViewController: UIViewController, WKUIDelegate, WKNavigationDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
- 
-        let myURL = URL(string: "http://weebee1212.com/sp/dantai/content.php?id=1")
-        let myRequest = URLRequest(url: myURL!)
-        webView.load(myRequest)
-
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = group?.name
+        load()
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        let title = webView.title
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +36,14 @@ class GroupDetailViewController: UIViewController, WKUIDelegate, WKNavigationDel
         // Dispose of any resources that can be recreated.
     }
     
+    private func load() {
+        if let group = group{
+            let url = URL(string: group.detailURL)
+            let myRequest = URLRequest(url: url!)
+            webView.load(myRequest)
+        }
+    }
+
 
     /*
     // MARK: - Navigation
