@@ -27,14 +27,25 @@ class GroupViewController: UIViewController {
         super.viewDidLoad()
         
         load()
-
-        // Do any additional setup after loading the view.
+        
+        setSearchBar()
+        
         tableView.register(UINib(nibName: "GroupTableViewCell", bundle: nil), forCellReuseIdentifier: "GroupTableViewCell")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func setSearchBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "団体一覧"
+        
+        let search  = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self as? UISearchResultsUpdating
+        search.dimsBackgroundDuringPresentation = false
+        navigationItem.searchController = search
     }
     
     private func load() {
