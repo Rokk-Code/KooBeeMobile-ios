@@ -40,6 +40,8 @@ class GroupViewController: UIViewController {
     
     private func setSearchBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationItem.largeTitleDisplayMode = .automatic
+        
         self.title = "団体一覧"
         
         let search  = UISearchController(searchResultsController: nil)
