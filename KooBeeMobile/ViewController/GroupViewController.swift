@@ -23,6 +23,13 @@ class GroupViewController: UIViewController {
         }
     }
     
+    private var filteredGroups = [Group]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    private var search = UISearchController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,15 +51,21 @@ class GroupViewController: UIViewController {
         
         self.title = "団体一覧"
         
-        let search  = UISearchController(searchResultsController: nil)
-        search.searchResultsUpdater = self as? UISearchResultsUpdating
+        //追記部分
+        search  = UISearchController(searchResultsController: nil)
         search.dimsBackgroundDuringPresentation = false
+        search.searchResultsUpdater = self
         navigationItem.searchController = search
+        //SearchResultControllerでやりたい
+//        search = UISearchController(searchResultsController: SearchResultViewController())
+//        search.searchResultsUpdater = SearchResultViewController()
+//        search.dimsBackgroundDuringPresentation = false
+//        navigationItem.searchController = search
     }
     
     private func load() {
         let params: [String: Any] = [
-            "name" : "あああ",
+            "limit" : 30,
         ]
         viewmodel.fetchGroups(params: params)
             .onSuccess { [weak self] data in
@@ -75,29 +88,55 @@ class GroupViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension GroupViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchController.searchBar.text, text.count > 0 {
+            filteredGroups = groups.filter {
+                $0.name.contains(text.lowercased()) ||
+                    $0.cathegory.contains(text.lowercased())
+
+            }
+            print(filteredGroups)
+        } else {
+            filteredGroups = groups
+        }
+        print(groups)
+        tableView.reloadData()
+    }
 }
 
 extension GroupViewController: UITableViewDelegate, UITableViewDataSource  {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(groups.count)
-        return groups.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
+        if search.isActive  {
+            return filteredGroups.count
+        } else {
+            return groups.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: GroupTableViewCell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCell", for: indexPath) as! GroupTableViewCell
-        cell.bindData(group: groups[indexPath.row])
-        
+
+        if search.isActive {
+            cell.bindData(group: filteredGroups[indexPath.row])
+        } else {
+            cell.bindData(group: groups[indexPath.row])
+        }
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard: UIStoryboard = UIStoryboard(name: "GroupDetail", bundle: nil)
         if let nextVC: GroupDetailViewController = storyboard.instantiateViewController(withIdentifier: "GroupDetailViewController") as? GroupDetailViewController {
-            nextVC.group = groups[indexPath.row]
+            if search.isActive {
+                nextVC.group = filteredGroups[indexPath.row]
+            } else {
+                nextVC.group = groups[indexPath.row]
+            }
             navigationController?.pushViewController(nextVC, animated: true)
         }
-        
     }
 }

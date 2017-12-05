@@ -25,3 +25,19 @@ struct GetGroupsRequest: HerokuRequest {
         return (max, groups)
     }
 }
+
+struct SearchGroupsRequest: HerokuRequest {
+    typealias Response =  (max: Int, groups: [Group])
+    
+    let queryParameters: [String : Any]?
+    var method: HTTPMethod { return .get }
+    var path: String { return "/groups/search" }
+    
+    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> (max: Int, groups: [Group]) {
+        let json = JSON(object)
+        
+        let max = 0
+        let groups = json[].arrayValue.map { Group(json: $0) }
+        return (max, groups)
+    }
+}
