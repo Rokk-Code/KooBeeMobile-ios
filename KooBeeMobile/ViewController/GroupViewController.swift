@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftRefresher
 
 class GroupViewController: UIViewController {
 
@@ -43,6 +44,7 @@ class GroupViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
     
     private func setSearchBar() {

@@ -25,6 +25,7 @@
 		547991EE1FD11F90002F55E6 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547991EC1FD11F90002F55E6 /* SearchResultsViewController.swift */; };
 		547991F11FD12165002F55E6 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547991F01FD12165002F55E6 /* SearchResult.storyboard */; };
 		54AAE95E1FCAD88A004C5CB4 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AAE95D1FCAD88A004C5CB4 /* GroupViewModel.swift */; };
+		54B39DA71FD6AE8C0087C019 /* SwiftRefresher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B39DA61FD6AE8C0087C019 /* SwiftRefresher.framework */; };
 		54B4CFFF1FCC09160021C03B /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B4CFFD1FCC09160021C03B /* SettingTableViewCell.swift */; };
 		54B4D0001FCC09160021C03B /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54B4CFFE1FCC09160021C03B /* SettingTableViewCell.xib */; };
 		54B53B3D1FCBAE1000FB655A /* HerokuRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B53B3C1FCBAE0F00FB655A /* HerokuRequest.swift */; };
@@ -58,6 +59,7 @@
 		547991EC1FD11F90002F55E6 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		547991F01FD12165002F55E6 /* SearchResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResult.storyboard; sourceTree = "<group>"; };
 		54AAE95D1FCAD88A004C5CB4 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		54B39DA61FD6AE8C0087C019 /* SwiftRefresher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftRefresher.framework; path = Carthage/Build/iOS/SwiftRefresher.framework; sourceTree = "<group>"; };
 		54B4CFFD1FCC09160021C03B /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		54B4CFFE1FCC09160021C03B /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		54B53B3C1FCBAE0F00FB655A /* HerokuRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerokuRequest.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B39DA71FD6AE8C0087C019 /* SwiftRefresher.framework in Frameworks */,
 				54B53B501FCBB20A00FB655A /* SwiftyJSON.framework in Frameworks */,
 				54B53B491FCBB04200FB655A /* BrightFutures.framework in Frameworks */,
 				54B53B451FCBAF4900FB655A /* SDWebImage.framework in Frameworks */,
@@ -186,6 +189,7 @@
 		54B53B411FCBAF4800FB655A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54B39DA61FD6AE8C0087C019 /* SwiftRefresher.framework */,
 				54B53B4F1FCBB20A00FB655A /* SwiftyJSON.framework */,
 				54B53B4D1FCBB1FD00FB655A /* SwiftyJSON.framework.dSYM */,
 				54B53B481FCBB04200FB655A /* BrightFutures.framework */,
@@ -290,6 +294,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftRefresher.framework",
 			);
 			outputPaths = (
 			);
