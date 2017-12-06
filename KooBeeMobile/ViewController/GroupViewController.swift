@@ -36,6 +36,7 @@ class GroupViewController: UIViewController {
         setSearchBar()
         
         tableView.register(UINib(nibName: "GroupTableViewCell", bundle: nil), forCellReuseIdentifier: "GroupTableViewCell")
+        tableView.srf_addRefresher(createRefresherView())
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,6 +78,26 @@ class GroupViewController: UIViewController {
 
     }
     
+    fileprivate func createRefresherView() -> Refresher {
+        let refresher = Refresher { [weak self] in
+            
+            guard let `self` = self else { return }
+            
+            // ちらつき防止のためdelayを入れている
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.load()
+                self.tableView.srf_endRefreshing()
+                
+            }
+        }
+        
+        refresher.createCustomRefreshView { () -> SwfitRefresherEventReceivable in
+            return SimpleRefreshView(activityIndicatorViewStyle: .gray, pullingImage: nil)
+        }
+        
+        return refresher
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -106,6 +127,7 @@ extension GroupViewController: UISearchResultsUpdating {
             .onFailure { [weak self] error in
                 // self?.showErrorAlert(error.localizedDescription, completion: nil
         }
+        tableView.reloadData()
     }
 }
 
