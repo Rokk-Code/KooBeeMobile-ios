@@ -24,11 +24,8 @@ class GroupViewController: UIViewController {
         }
     }
     
-    private var filteredGroups = [Group]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    private var filteredGroups = [Group]()
+    
     private var search = UISearchController()
     
     override func viewDidLoad() {
@@ -94,18 +91,21 @@ class GroupViewController: UIViewController {
 
 extension GroupViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        if let text = searchController.searchBar.text, text.count > 0 {
-            filteredGroups = groups.filter {
-                $0.name.contains(text.lowercased()) ||
-                    $0.cathegory.contains(text.lowercased())
-
+        guard let searchText = searchController.searchBar.text else { return }
+        
+        let params: [String: Any] = [
+            "keywords" : searchText,
+        ]
+            
+        viewmodel.searchGroups(params: params)
+            .onSuccess { [weak self] data in
+                self?.filteredGroups = data.groups
+                
+                self?.tableView.reloadData()
             }
-            print(filteredGroups)
-        } else {
-            filteredGroups = groups
+            .onFailure { [weak self] error in
+                // self?.showErrorAlert(error.localizedDescription, completion: nil
         }
-        print(groups)
-        tableView.reloadData()
     }
 }
 
