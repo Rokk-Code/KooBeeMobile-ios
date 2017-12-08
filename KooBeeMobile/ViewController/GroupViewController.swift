@@ -42,13 +42,14 @@ class GroupViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
     
     private func setSearchBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .automatic
         
+        let refreshButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh , target: self, action: #selector(buttonTapped(sender:)))
+        self.navigationItem.setRightBarButton(refreshButton, animated: true)
         self.title = "団体一覧"
         
         //追記部分
@@ -75,7 +76,6 @@ class GroupViewController: UIViewController {
             .onFailure { [weak self] error in
                 // self?.showErrorAlert(error.localizedDescription, completion: nil
         }
-
     }
     
     fileprivate func createRefresherView() -> Refresher {
@@ -94,10 +94,15 @@ class GroupViewController: UIViewController {
         refresher.createCustomRefreshView { () -> SwfitRefresherEventReceivable in
             return SimpleRefreshView(activityIndicatorViewStyle: .gray, pullingImage: nil)
         }
-        
         return refresher
     }
     
+    @IBAction private func buttonTapped(sender: AnyObject) {
+//        let storyboard: UIStoryboard = UIStoryboard(name: "Setting", bundle: nil)
+//        if let nextVC: SettingViewController = storyboard.instantiateViewController(withIdentifier: "SettingViewController") as? SettingViewController {
+//            navigationController?.pushViewController( nextVC, animated: true)
+//        }
+    }
 
     /*
     // MARK: - Navigation
