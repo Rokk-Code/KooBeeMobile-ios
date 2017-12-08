@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -24,9 +24,9 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h7O-6c-bUE">
                         <rect key="frame" x="8" y="8" width="71.5" height="71.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="71.5" id="YJA-My-nGv"/>
+                            <constraint firstAttribute="height" constant="71.5" id="3eO-NN-2k2"/>
+                            <constraint firstAttribute="width" constant="71.5" id="YRl-dy-eoj"/>
                             <constraint firstAttribute="width" secondItem="h7O-6c-bUE" secondAttribute="height" multiplier="1:1" id="b8c-4Q-G9A"/>
-                            <constraint firstAttribute="width" constant="71.5" id="qry-zi-Hyu"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GO6-kb-Hyt">
@@ -54,14 +54,14 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="GO6-kb-Hyt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="D50-1c-R2L"/>
                     <constraint firstItem="S3t-7x-ef5" firstAttribute="leading" secondItem="OFT-Qq-uAP" secondAttribute="trailing" constant="8" id="E8c-3e-Ex5"/>
                     <constraint firstItem="GO6-kb-Hyt" firstAttribute="leading" secondItem="h7O-6c-bUE" secondAttribute="trailing" constant="8" id="LEc-Hi-b6E"/>
+                    <constraint firstAttribute="bottom" secondItem="S3t-7x-ef5" secondAttribute="bottom" id="OVu-PW-TT6"/>
                     <constraint firstItem="S3t-7x-ef5" firstAttribute="top" secondItem="GO6-kb-Hyt" secondAttribute="bottom" constant="8" id="QP7-vG-bXv"/>
                     <constraint firstAttribute="trailing" secondItem="S3t-7x-ef5" secondAttribute="trailing" constant="8" id="Qd9-iB-imD"/>
-                    <constraint firstItem="GO6-kb-Hyt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="Qif-ni-BxN"/>
                     <constraint firstItem="h7O-6c-bUE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="UsO-t2-eLj"/>
                     <constraint firstItem="OFT-Qq-uAP" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="8" id="aSr-8p-JJw"/>
-                    <constraint firstAttribute="bottom" secondItem="S3t-7x-ef5" secondAttribute="bottom" id="bBt-5k-wft"/>
                     <constraint firstItem="h7O-6c-bUE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="g6f-sn-ZoD"/>
                     <constraint firstItem="OFT-Qq-uAP" firstAttribute="leading" secondItem="h7O-6c-bUE" secondAttribute="trailing" constant="8" id="jfd-rg-NMd"/>
                     <constraint firstAttribute="bottom" secondItem="h7O-6c-bUE" secondAttribute="bottom" constant="8" id="n90-gf-A2c"/>

@@ -1,0 +1,9 @@
+{
+  "commitish" : "0.9.3",
+  "iOS" : [
+    {
+      "name" : "SwiftRefresher",
+      "hash" : "a788e18f16453d34bb1fab0b9ae23a1bbe2f5d56db2ca868bfa8429b7b109912"
+    }
+  ]
+}

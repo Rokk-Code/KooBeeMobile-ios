@@ -17,4 +17,9 @@ class GroupViewModel {
         
         return APIManager.send(request: GetGroupsRequest(queryParameters: params))
     }
+    
+    func searchGroups(params: [String: Any]) -> Future<SearchGroupsRequest.Response, SessionTaskError> {
+        
+        return APIManager.send(request: SearchGroupsRequest(queryParameters: params))
+    }
 }

@@ -13,5 +13,4 @@ protocol HerokuRequest: Request {}
 
 extension HerokuRequest {
     var baseURL: URL  { return URL(string: "https://pipinosuke-api.herokuapp.com/api/v1")! }
-    
 }

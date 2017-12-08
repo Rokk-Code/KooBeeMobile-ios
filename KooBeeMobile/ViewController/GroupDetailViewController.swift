@@ -37,13 +37,11 @@ class GroupDetailViewController: UIViewController, WKUIDelegate, WKNavigationDel
     }
     
     private func load() {
-        if let group = group{
-            let url = URL(string: group.detailURL)
-            let myRequest = URLRequest(url: url!)
-            webView.load(myRequest)
-        }
+        guard let group = group else { return }
+        let url = URL(string: group.detailURL)
+        let myRequest = URLRequest(url: url!)
+        webView.load(myRequest)
     }
-
 
     /*
     // MARK: - Navigation
