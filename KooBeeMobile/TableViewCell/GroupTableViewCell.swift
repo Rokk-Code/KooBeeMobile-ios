@@ -21,6 +21,8 @@ class GroupTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        thumb.layer.cornerRadius = thumb.frame.size.width * 0.5
+        thumb.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
