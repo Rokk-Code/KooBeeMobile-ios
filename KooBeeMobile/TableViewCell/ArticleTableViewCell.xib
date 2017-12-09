@@ -28,7 +28,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkL-3O-ow3">
-                        <rect key="frame" x="28" y="324.5" width="492" height="113.5"/>
+                        <rect key="frame" x="28" y="324.5" width="492" height="84.5"/>
                         <attributedString key="attributedText">
                             <fragment content="title">
                                 <attributes>
@@ -41,21 +41,34 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Koobee-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="AYc-hP-P0K">
                         <rect key="frame" x="0.0" y="8" width="118" height="83"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="catchcopy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsG-gI-Foy">
+                        <rect key="frame" x="28" y="417" width="492" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="WN9-xa-g1m"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="HsG-gI-Foy" secondAttribute="bottom" constant="8" id="DPX-y9-IkS"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ZkL-3O-ow3" secondAttribute="trailing" constant="8" id="GxG-DS-UV1"/>
                     <constraint firstItem="AYc-hP-P0K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="P7d-Vq-fK2"/>
+                    <constraint firstItem="HsG-gI-Foy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="Pgy-se-2Gh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="HsG-gI-Foy" secondAttribute="trailing" constant="8" id="Sdu-71-N6Y"/>
                     <constraint firstItem="ZkL-3O-ow3" firstAttribute="top" secondItem="BV8-qu-Dlr" secondAttribute="bottom" constant="8" id="bue-fO-hkc"/>
                     <constraint firstAttribute="trailing" secondItem="BV8-qu-Dlr" secondAttribute="trailing" id="gLb-hJ-HcM"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="ZkL-3O-ow3" secondAttribute="bottom" constant="8" id="k0C-P9-2H1"/>
                     <constraint firstItem="AYc-hP-P0K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="kn0-BK-sBM"/>
                     <constraint firstItem="BV8-qu-Dlr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ptF-rB-Rs1"/>
+                    <constraint firstItem="HsG-gI-Foy" firstAttribute="top" secondItem="ZkL-3O-ow3" secondAttribute="bottom" constant="8" id="sTG-Y0-LzH"/>
                     <constraint firstItem="BV8-qu-Dlr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="wrI-5Y-x8e"/>
                     <constraint firstItem="ZkL-3O-ow3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="zVL-H0-9jc"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="copyLabel" destination="HsG-gI-Foy" id="9I9-lF-i5D"/>
                 <outlet property="publisherImage" destination="AYc-hP-P0K" id="pFa-T2-6Jg"/>
                 <outlet property="thumbImage" destination="BV8-qu-Dlr" id="XYU-yO-Mkv"/>
                 <outlet property="titleLabel" destination="ZkL-3O-ow3" id="TPf-gw-4gi"/>

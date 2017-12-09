@@ -14,6 +14,7 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var thumbImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var publisherImage: UIImageView!
+    @IBOutlet weak var copyLabel: UILabel!
     
     let stringAttributes1: [NSAttributedStringKey : Any] = [
         .font : UIFont.boldSystemFont(ofSize: 24.0) ,
@@ -21,7 +22,8 @@ class ArticleTableViewCell: UITableViewCell {
     ]
     
     let stringAttributes2: [NSAttributedStringKey : Any] = [
-        .font : UIFont.boldSystemFont(ofSize: 20.0)
+        .font : UIFont.systemFont(ofSize: 21.0) ,
+        .foregroundColor : UIColor.gray
     ]
     
     override func awakeFromNib() {
@@ -34,6 +36,8 @@ class ArticleTableViewCell: UITableViewCell {
         
         titleLabel.numberOfLines = 0
         titleLabel.sizeToFit()
+        copyLabel.numberOfLines = 1
+        copyLabel.adjustsFontSizeToFitWidth = true
 
     }
 
@@ -44,14 +48,11 @@ class ArticleTableViewCell: UITableViewCell {
     }
     
     func bindData(article: Article) {
-        let string1 = NSAttributedString(string: "[\(article.name)]", attributes: stringAttributes1)
+        let string1 = NSAttributedString(string: article.name, attributes: stringAttributes1)
         let string2 = NSAttributedString(string: article.aboutText, attributes: stringAttributes2)
         
-        let mutableAttributedString = NSMutableAttributedString()
-        mutableAttributedString.append(string1)
-        mutableAttributedString.append(string2)
-        
-        titleLabel.attributedText = mutableAttributedString
+        titleLabel.attributedText = string1
+        copyLabel.attributedText = string2
  //       titleLabel.text = "[\(article.name)] \(article.copyText)"
 
         guard let thumbUrl = URL(string: article.thumbURL) else { return }
