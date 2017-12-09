@@ -36,6 +36,13 @@
 		54B53B491FCBB04200FB655A /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B53B481FCBB04200FB655A /* BrightFutures.framework */; };
 		54B53B4C1FCBB0AC00FB655A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B53B4B1FCBB0AC00FB655A /* APIManager.swift */; };
 		54B53B501FCBB20A00FB655A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B53B4F1FCBB20A00FB655A /* SwiftyJSON.framework */; };
+		54E446B81FDB3AB10096CE4C /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E446B71FDB3AB10096CE4C /* ArticleViewController.swift */; };
+		54E446BA1FDB3AC00096CE4C /* Article.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54E446B91FDB3AC00096CE4C /* Article.storyboard */; };
+		54E446BD1FDB3B1E0096CE4C /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E446BB1FDB3B1E0096CE4C /* ArticleTableViewCell.swift */; };
+		54E446BE1FDB3B1E0096CE4C /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E446BC1FDB3B1E0096CE4C /* ArticleTableViewCell.xib */; };
+		54E446C01FDB3CEB0096CE4C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E446BF1FDB3CEB0096CE4C /* Article.swift */; };
+		54E446C21FDB3DEA0096CE4C /* GetArticlesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E446C11FDB3DEA0096CE4C /* GetArticlesRequest.swift */; };
+		54E446C41FDB3EA20096CE4C /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E446C31FDB3EA20096CE4C /* ArticleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +78,13 @@
 		54B53B4B1FCBB0AC00FB655A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		54B53B4D1FCBB1FD00FB655A /* SwiftyJSON.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyJSON.framework.dSYM; path = Carthage/Build/iOS/SwiftyJSON.framework.dSYM; sourceTree = "<group>"; };
 		54B53B4F1FCBB20A00FB655A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		54E446B71FDB3AB10096CE4C /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		54E446B91FDB3AC00096CE4C /* Article.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Article.storyboard; sourceTree = "<group>"; };
+		54E446BB1FDB3B1E0096CE4C /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		54E446BC1FDB3B1E0096CE4C /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		54E446BF1FDB3CEB0096CE4C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		54E446C11FDB3DEA0096CE4C /* GetArticlesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArticlesRequest.swift; sourceTree = "<group>"; };
+		54E446C31FDB3EA20096CE4C /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +149,7 @@
 				5403866A1FC57526007FDDF1 /* MainTabBarController.swift */,
 				540386701FC57761007FDDF1 /* GroupDetailViewController.swift */,
 				547991EC1FD11F90002F55E6 /* SearchResultsViewController.swift */,
+				54E446B71FDB3AB10096CE4C /* ArticleViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -146,6 +161,7 @@
 				540386681FC57401007FDDF1 /* GroupDetail.storyboard */,
 				5403866C1FC57583007FDDF1 /* Setting.storyboard */,
 				547991F01FD12165002F55E6 /* SearchResult.storyboard */,
+				54E446B91FDB3AC00096CE4C /* Article.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -157,6 +173,8 @@
 				540386611FC57109007FDDF1 /* GroupTableViewCell.xib */,
 				54B4CFFD1FCC09160021C03B /* SettingTableViewCell.swift */,
 				54B4CFFE1FCC09160021C03B /* SettingTableViewCell.xib */,
+				54E446BB1FDB3B1E0096CE4C /* ArticleTableViewCell.swift */,
+				54E446BC1FDB3B1E0096CE4C /* ArticleTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -165,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				540386651FC572F0007FDDF1 /* Group.swift */,
+				54E446BF1FDB3CEB0096CE4C /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				54AAE95D1FCAD88A004C5CB4 /* GroupViewModel.swift */,
+				54E446C31FDB3EA20096CE4C /* ArticleViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -182,6 +202,7 @@
 			children = (
 				54B53B3C1FCBAE0F00FB655A /* HerokuRequest.swift */,
 				54B53B3E1FCBAE5500FB655A /* GetGroupesRequest.swift */,
+				54E446C11FDB3DEA0096CE4C /* GetArticlesRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -271,6 +292,8 @@
 				547991F11FD12165002F55E6 /* SearchResult.storyboard in Resources */,
 				540386521FC56FCD007FDDF1 /* LaunchScreen.storyboard in Resources */,
 				540386631FC57109007FDDF1 /* GroupTableViewCell.xib in Resources */,
+				54E446BE1FDB3B1E0096CE4C /* ArticleTableViewCell.xib in Resources */,
+				54E446BA1FDB3AC00096CE4C /* Article.storyboard in Resources */,
 				54B4D0001FCC09160021C03B /* SettingTableViewCell.xib in Resources */,
 				5403866D1FC57583007FDDF1 /* Setting.storyboard in Resources */,
 				5403864F1FC56FCD007FDDF1 /* Assets.xcassets in Resources */,
@@ -316,12 +339,17 @@
 				54AAE95E1FCAD88A004C5CB4 /* GroupViewModel.swift in Sources */,
 				547991EE1FD11F90002F55E6 /* SearchResultsViewController.swift in Sources */,
 				54B53B3D1FCBAE1000FB655A /* HerokuRequest.swift in Sources */,
+				54E446C21FDB3DEA0096CE4C /* GetArticlesRequest.swift in Sources */,
+				54E446B81FDB3AB10096CE4C /* ArticleViewController.swift in Sources */,
 				540386621FC57109007FDDF1 /* GroupTableViewCell.swift in Sources */,
 				5403866B1FC57526007FDDF1 /* MainTabBarController.swift in Sources */,
 				54B4CFFF1FCC09160021C03B /* SettingTableViewCell.swift in Sources */,
 				5403864A1FC56FCC007FDDF1 /* ViewController.swift in Sources */,
+				54E446BD1FDB3B1E0096CE4C /* ArticleTableViewCell.swift in Sources */,
 				540386661FC572F0007FDDF1 /* Group.swift in Sources */,
+				54E446C01FDB3CEB0096CE4C /* Article.swift in Sources */,
 				5403866F1FC575BC007FDDF1 /* SettingViewController.swift in Sources */,
+				54E446C41FDB3EA20096CE4C /* ArticleViewModel.swift in Sources */,
 				540386481FC56FCC007FDDF1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
