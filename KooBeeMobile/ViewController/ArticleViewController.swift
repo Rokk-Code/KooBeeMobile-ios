@@ -32,6 +32,7 @@ class ArticleViewController: UIViewController {
         load()
         
         tableView.separatorStyle = .none
+        title = "個人"
     }
 
     override func didReceiveMemoryWarning() {

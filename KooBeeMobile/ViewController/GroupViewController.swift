@@ -50,8 +50,7 @@ class GroupViewController: UIViewController {
         
         let refreshButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh , target: self, action: #selector(buttonTapped(sender:)))
         self.navigationItem.setRightBarButton(refreshButton, animated: true)
-        self.title = "団体一覧"
-        
+        self.title = "団体"
         //追記部分
         search  = UISearchController(searchResultsController: nil)
         search.dimsBackgroundDuringPresentation = false

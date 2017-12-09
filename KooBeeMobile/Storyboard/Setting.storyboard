@@ -101,11 +101,11 @@
             </objects>
             <point key="canvasLocation" x="731.5" y="-130.5"/>
         </scene>
-        <!--Item-->
+        <!--マイページ-->
         <scene sceneID="D22-K9-BX7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VNE-NW-mXZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ROW-nH-aXF"/>
+                    <tabBarItem key="tabBarItem" title="マイページ" id="ROW-nH-aXF"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KAN-kf-vED">

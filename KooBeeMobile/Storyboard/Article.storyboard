@@ -55,11 +55,11 @@
             </objects>
             <point key="canvasLocation" x="204" y="185.75712143928038"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--個人-->
         <scene sceneID="dpN-rs-chF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZIO-fd-Emt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="0Ux-Aq-ppf"/>
+                    <tabBarItem key="tabBarItem" title="個人" id="0Ux-Aq-ppf"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Ge-Vs-QOX">
