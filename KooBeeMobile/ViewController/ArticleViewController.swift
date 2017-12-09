@@ -30,6 +30,8 @@ class ArticleViewController: UIViewController {
         tableView.register(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "ArticleTableViewCell")
         
         load()
+        
+        tableView.separatorStyle = .none
     }
 
     override func didReceiveMemoryWarning() {

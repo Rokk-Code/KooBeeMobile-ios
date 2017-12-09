@@ -38,6 +38,8 @@ class ArticleTableViewCell: UITableViewCell {
         titleLabel.sizeToFit()
         copyLabel.numberOfLines = 1
         copyLabel.adjustsFontSizeToFitWidth = true
+        thumbImage.layer.borderColor = UIColor.black.cgColor
+        thumbImage.layer.borderWidth = 0.2
 
     }
 
