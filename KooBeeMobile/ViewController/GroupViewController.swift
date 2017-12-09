@@ -28,12 +28,14 @@ class GroupViewController: UIViewController {
     
     private var search = UISearchController()
     
+    private var isLoading = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        load()
-        
         setSearchBar()
+
+        load()
         
         tableView.register(UINib(nibName: "GroupTableViewCell", bundle: nil), forCellReuseIdentifier: "GroupTableViewCell")
         tableView.srf_addRefresher(createRefresherView())
@@ -63,6 +65,17 @@ class GroupViewController: UIViewController {
 //        navigationItem.searchController = search
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentOffsetY = scrollView.contentOffset.y
+        let maxOffset = scrollView.contentSize.height - scrollView.frame.height
+        let distanceToBottom = maxOffset - currentOffsetY
+        
+        if distanceToBottom < 400 && isLoading == false {
+            isLoading = true
+            loadmore()
+        }
+    }
+    
     private func load() {
         let params: [String: Any] = [
             "limit" : 30,
@@ -71,9 +84,31 @@ class GroupViewController: UIViewController {
             .onSuccess { [weak self] data in
                 self?.groups = data.groups
                 self?.tableView.reloadData()
+                self?.isLoading = false
             }
             .onFailure { [weak self] error in
                 // self?.showErrorAlert(error.localizedDescription, completion: nil
+                self?.isLoading = false
+        }
+ 
+        
+    }
+    
+    private func loadmore() {
+        let params: [String: Any] = [
+            "limit" : 20,
+            "range" : groups.count
+        ]
+
+        viewmodel.fetchGroups(params: params)
+            .onSuccess { [weak self] data in
+                self?.groups.append(contentsOf: data.groups)
+                self?.tableView.reloadData()
+                self?.isLoading = false
+            }
+            .onFailure { [weak self] error in
+                // self?.showErrorAlert(error.localizedDescription, completion: nil
+                self?.isLoading = false
         }
     }
     
