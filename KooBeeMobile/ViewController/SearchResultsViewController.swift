@@ -29,7 +29,6 @@ class SearchResultViewController: UIViewController {
 extension SearchResultViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.navigationItem.searchController?.searchBar.text else { return }
-        //print("-----------------------\(searchText)")
         
         if searchText.count == 0 { return }
         

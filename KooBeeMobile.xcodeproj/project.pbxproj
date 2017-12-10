@@ -22,6 +22,10 @@
 		5403866D1FC57583007FDDF1 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5403866C1FC57583007FDDF1 /* Setting.storyboard */; };
 		5403866F1FC575BC007FDDF1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403866E1FC575BC007FDDF1 /* SettingViewController.swift */; };
 		540386711FC57761007FDDF1 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540386701FC57761007FDDF1 /* GroupDetailViewController.swift */; };
+		545FF9AD1FDD5AF500EE2ECB /* ArticleOutline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545FF9AC1FDD5AF500EE2ECB /* ArticleOutline.storyboard */; };
+		545FF9AF1FDD5C5D00EE2ECB /* ArticleOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545FF9AE1FDD5C5D00EE2ECB /* ArticleOutlineViewController.swift */; };
+		545FF9B11FDD5D2600EE2ECB /* GroupOutline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545FF9B01FDD5D2600EE2ECB /* GroupOutline.storyboard */; };
+		545FF9B31FDD5D3700EE2ECB /* GroupOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545FF9B21FDD5D3700EE2ECB /* GroupOutlineViewController.swift */; };
 		547991EE1FD11F90002F55E6 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547991EC1FD11F90002F55E6 /* SearchResultsViewController.swift */; };
 		547991F11FD12165002F55E6 /* SearchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547991F01FD12165002F55E6 /* SearchResult.storyboard */; };
 		54AAE95E1FCAD88A004C5CB4 /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AAE95D1FCAD88A004C5CB4 /* GroupViewModel.swift */; };
@@ -63,6 +67,10 @@
 		5403866C1FC57583007FDDF1 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		5403866E1FC575BC007FDDF1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		540386701FC57761007FDDF1 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
+		545FF9AC1FDD5AF500EE2ECB /* ArticleOutline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleOutline.storyboard; sourceTree = "<group>"; };
+		545FF9AE1FDD5C5D00EE2ECB /* ArticleOutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOutlineViewController.swift; sourceTree = "<group>"; };
+		545FF9B01FDD5D2600EE2ECB /* GroupOutline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupOutline.storyboard; sourceTree = "<group>"; };
+		545FF9B21FDD5D3700EE2ECB /* GroupOutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupOutlineViewController.swift; sourceTree = "<group>"; };
 		547991EC1FD11F90002F55E6 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		547991F01FD12165002F55E6 /* SearchResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResult.storyboard; sourceTree = "<group>"; };
 		54AAE95D1FCAD88A004C5CB4 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
@@ -150,6 +158,8 @@
 				540386701FC57761007FDDF1 /* GroupDetailViewController.swift */,
 				547991EC1FD11F90002F55E6 /* SearchResultsViewController.swift */,
 				54E446B71FDB3AB10096CE4C /* ArticleViewController.swift */,
+				545FF9AE1FDD5C5D00EE2ECB /* ArticleOutlineViewController.swift */,
+				545FF9B21FDD5D3700EE2ECB /* GroupOutlineViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -162,6 +172,8 @@
 				5403866C1FC57583007FDDF1 /* Setting.storyboard */,
 				547991F01FD12165002F55E6 /* SearchResult.storyboard */,
 				54E446B91FDB3AC00096CE4C /* Article.storyboard */,
+				545FF9AC1FDD5AF500EE2ECB /* ArticleOutline.storyboard */,
+				545FF9B01FDD5D2600EE2ECB /* GroupOutline.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -290,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				547991F11FD12165002F55E6 /* SearchResult.storyboard in Resources */,
+				545FF9B11FDD5D2600EE2ECB /* GroupOutline.storyboard in Resources */,
 				540386521FC56FCD007FDDF1 /* LaunchScreen.storyboard in Resources */,
 				540386631FC57109007FDDF1 /* GroupTableViewCell.xib in Resources */,
 				54E446BE1FDB3B1E0096CE4C /* ArticleTableViewCell.xib in Resources */,
@@ -297,6 +310,7 @@
 				54B4D0001FCC09160021C03B /* SettingTableViewCell.xib in Resources */,
 				5403866D1FC57583007FDDF1 /* Setting.storyboard in Resources */,
 				5403864F1FC56FCD007FDDF1 /* Assets.xcassets in Resources */,
+				545FF9AD1FDD5AF500EE2ECB /* ArticleOutline.storyboard in Resources */,
 				540386691FC57401007FDDF1 /* GroupDetail.storyboard in Resources */,
 				5403865B1FC5700C007FDDF1 /* Group.storyboard in Resources */,
 				5403864D1FC56FCD007FDDF1 /* Main.storyboard in Resources */,
@@ -336,6 +350,7 @@
 				54B53B3F1FCBAE5500FB655A /* GetGroupesRequest.swift in Sources */,
 				5403865E1FC57038007FDDF1 /* GroupViewController.swift in Sources */,
 				540386711FC57761007FDDF1 /* GroupDetailViewController.swift in Sources */,
+				545FF9AF1FDD5C5D00EE2ECB /* ArticleOutlineViewController.swift in Sources */,
 				54AAE95E1FCAD88A004C5CB4 /* GroupViewModel.swift in Sources */,
 				547991EE1FD11F90002F55E6 /* SearchResultsViewController.swift in Sources */,
 				54B53B3D1FCBAE1000FB655A /* HerokuRequest.swift in Sources */,
@@ -345,6 +360,7 @@
 				5403866B1FC57526007FDDF1 /* MainTabBarController.swift in Sources */,
 				54B4CFFF1FCC09160021C03B /* SettingTableViewCell.swift in Sources */,
 				5403864A1FC56FCC007FDDF1 /* ViewController.swift in Sources */,
+				545FF9B31FDD5D3700EE2ECB /* GroupOutlineViewController.swift in Sources */,
 				54E446BD1FDB3B1E0096CE4C /* ArticleTableViewCell.swift in Sources */,
 				540386661FC572F0007FDDF1 /* Group.swift in Sources */,
 				54E446C01FDB3CEB0096CE4C /* Article.swift in Sources */,

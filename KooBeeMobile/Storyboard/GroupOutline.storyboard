@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ctR-t0-sbf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Group Outline View Controller-->
+        <scene sceneID="R0h-MN-9xx">
+            <objects>
+                <viewController storyboardIdentifier="GroupOutlineViewController" id="ctR-t0-sbf" customClass="GroupOutlineViewController" customModule="KooBeeMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P3V-eo-wHf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-7d-uGQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ly4-7d-uGQ" secondAttribute="height" multiplier="15:8" id="6A0-E6-gY7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnf-zc-pOq">
+                                <rect key="frame" x="8" y="228" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G07-nS-kBM">
+                                <rect key="frame" x="7" y="257" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJr-Hu-LUd">
+                                <rect key="frame" x="8" y="308" width="359" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="detailButtonTapped:" destination="ctR-t0-sbf" eventType="touchUpInside" id="KH8-zo-KJJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THG-oL-Z9f">
+                                <rect key="frame" x="253" y="358" width="114" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="THG-oL-Z9f" secondAttribute="height" multiplier="1:1" id="Yhx-8z-WB8"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="twitter-logo-yellow"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSo-4w-WkW">
+                                <rect key="frame" x="131" y="357.5" width="114" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jSo-4w-WkW" secondAttribute="height" multiplier="1:1" id="rae-tQ-cvA"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="FB-logo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fA-yw-hZ8">
+                                <rect key="frame" x="9" y="358" width="114" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8fA-yw-hZ8" secondAttribute="height" multiplier="1:1" id="Mb2-wk-eNc"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="HP-logo"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mXn-V1-6VB" firstAttribute="trailing" secondItem="THG-oL-Z9f" secondAttribute="trailing" constant="8" id="6Hs-cj-0XW"/>
+                            <constraint firstItem="jSo-4w-WkW" firstAttribute="centerX" secondItem="P3V-eo-wHf" secondAttribute="centerX" id="9CB-QB-fat"/>
+                            <constraint firstItem="G07-nS-kBM" firstAttribute="top" secondItem="bnf-zc-pOq" secondAttribute="bottom" constant="8" id="BI2-xv-iQC"/>
+                            <constraint firstItem="bJr-Hu-LUd" firstAttribute="leading" secondItem="mXn-V1-6VB" secondAttribute="leading" constant="8" id="CWG-WG-B2y"/>
+                            <constraint firstItem="Ly4-7d-uGQ" firstAttribute="top" secondItem="mXn-V1-6VB" secondAttribute="top" id="EF6-bs-5oW"/>
+                            <constraint firstItem="bJr-Hu-LUd" firstAttribute="top" secondItem="G07-nS-kBM" secondAttribute="bottom" constant="30" id="JHK-yS-EkY"/>
+                            <constraint firstItem="THG-oL-Z9f" firstAttribute="top" secondItem="bJr-Hu-LUd" secondAttribute="bottom" constant="20" id="Lrg-Eu-c79"/>
+                            <constraint firstItem="mXn-V1-6VB" firstAttribute="trailing" secondItem="Ly4-7d-uGQ" secondAttribute="trailing" id="N02-hI-Yal"/>
+                            <constraint firstItem="THG-oL-Z9f" firstAttribute="leading" secondItem="jSo-4w-WkW" secondAttribute="trailing" constant="8" id="NPs-RW-vt5"/>
+                            <constraint firstItem="jSo-4w-WkW" firstAttribute="width" secondItem="8fA-yw-hZ8" secondAttribute="width" id="PK2-us-Scg"/>
+                            <constraint firstItem="mXn-V1-6VB" firstAttribute="trailing" secondItem="bnf-zc-pOq" secondAttribute="trailing" constant="8" id="Plj-Uo-ZUy"/>
+                            <constraint firstItem="bnf-zc-pOq" firstAttribute="top" secondItem="Ly4-7d-uGQ" secondAttribute="bottom" constant="8" id="Sjz-On-XbT"/>
+                            <constraint firstItem="mXn-V1-6VB" firstAttribute="trailing" secondItem="G07-nS-kBM" secondAttribute="trailing" constant="9" id="SkA-Au-SxA"/>
+                            <constraint firstItem="jSo-4w-WkW" firstAttribute="leading" secondItem="8fA-yw-hZ8" secondAttribute="trailing" constant="8" id="TTT-Ip-uOw"/>
+                            <constraint firstItem="bnf-zc-pOq" firstAttribute="leading" secondItem="mXn-V1-6VB" secondAttribute="leading" constant="8" id="Ubd-4K-deH"/>
+                            <constraint firstItem="THG-oL-Z9f" firstAttribute="width" secondItem="8fA-yw-hZ8" secondAttribute="width" id="YXu-gd-4MO"/>
+                            <constraint firstItem="Ly4-7d-uGQ" firstAttribute="leading" secondItem="mXn-V1-6VB" secondAttribute="leading" id="bzA-bg-08S"/>
+                            <constraint firstItem="8fA-yw-hZ8" firstAttribute="top" secondItem="bJr-Hu-LUd" secondAttribute="bottom" constant="20" id="ggk-EN-ZlL"/>
+                            <constraint firstItem="jSo-4w-WkW" firstAttribute="centerY" secondItem="8fA-yw-hZ8" secondAttribute="centerY" id="m5T-EW-nQE"/>
+                            <constraint firstItem="THG-oL-Z9f" firstAttribute="leading" secondItem="jSo-4w-WkW" secondAttribute="trailing" constant="8" id="sXF-uu-Ha7"/>
+                            <constraint firstItem="mXn-V1-6VB" firstAttribute="trailing" secondItem="bJr-Hu-LUd" secondAttribute="trailing" constant="8" id="tHw-Ed-YJM"/>
+                            <constraint firstItem="G07-nS-kBM" firstAttribute="leading" secondItem="mXn-V1-6VB" secondAttribute="leading" constant="7" id="xph-kM-VgU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mXn-V1-6VB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TzI-4Q-Kn6"/>
+                    <connections>
+                        <outlet property="descLabel" destination="G07-nS-kBM" id="kFX-wP-yxq"/>
+                        <outlet property="detailButton" destination="bJr-Hu-LUd" id="ROc-fa-f2T"/>
+                        <outlet property="fbButton" destination="jSo-4w-WkW" id="U9d-ac-2WR"/>
+                        <outlet property="hpButton" destination="8fA-yw-hZ8" id="4h3-Q0-2ef"/>
+                        <outlet property="nameLabel" destination="bnf-zc-pOq" id="OMD-tS-03y"/>
+                        <outlet property="thumbImage" destination="Ly4-7d-uGQ" id="X94-46-3H8"/>
+                        <outlet property="twitterButton" destination="THG-oL-Z9f" id="YrO-Hu-YQI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0tt-FO-ttM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.200000000000003" y="151.57421289355324"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FB-logo" width="212" height="212"/>
+        <image name="HP-logo" width="500" height="500"/>
+        <image name="twitter-logo-yellow" width="625" height="625"/>
+    </resources>
+</document>
