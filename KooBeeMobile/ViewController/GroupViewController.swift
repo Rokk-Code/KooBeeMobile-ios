@@ -192,8 +192,8 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource  {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "GroupDetail", bundle: nil)
-        if let nextVC: GroupDetailViewController = storyboard.instantiateViewController(withIdentifier: "GroupDetailViewController") as? GroupDetailViewController {
+        let storyboard: UIStoryboard = UIStoryboard(name: "GroupOutline", bundle: nil)
+        if let nextVC: GroupOutlineViewController = storyboard.instantiateViewController(withIdentifier: "GroupOutlineViewController") as? GroupOutlineViewController {
             if search.isActive {
                 nextVC.group = filteredGroups[indexPath.row]
             } else {
