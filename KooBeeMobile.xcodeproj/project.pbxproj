@@ -22,6 +22,7 @@
 		5403866D1FC57583007FDDF1 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5403866C1FC57583007FDDF1 /* Setting.storyboard */; };
 		5403866F1FC575BC007FDDF1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403866E1FC575BC007FDDF1 /* SettingViewController.swift */; };
 		540386711FC57761007FDDF1 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540386701FC57761007FDDF1 /* GroupDetailViewController.swift */; };
+		544030561FDF5AAA0040349B /* DecodableDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544030551FDF5AAA0040349B /* DecodableDataParser.swift */; };
 		545FF9AD1FDD5AF500EE2ECB /* ArticleOutline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545FF9AC1FDD5AF500EE2ECB /* ArticleOutline.storyboard */; };
 		545FF9AF1FDD5C5D00EE2ECB /* ArticleOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545FF9AE1FDD5C5D00EE2ECB /* ArticleOutlineViewController.swift */; };
 		545FF9B11FDD5D2600EE2ECB /* GroupOutline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545FF9B01FDD5D2600EE2ECB /* GroupOutline.storyboard */; };
@@ -67,6 +68,7 @@
 		5403866C1FC57583007FDDF1 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		5403866E1FC575BC007FDDF1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		540386701FC57761007FDDF1 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
+		544030551FDF5AAA0040349B /* DecodableDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDataParser.swift; sourceTree = "<group>"; };
 		545FF9AC1FDD5AF500EE2ECB /* ArticleOutline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleOutline.storyboard; sourceTree = "<group>"; };
 		545FF9AE1FDD5C5D00EE2ECB /* ArticleOutlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOutlineViewController.swift; sourceTree = "<group>"; };
 		545FF9B01FDD5D2600EE2ECB /* GroupOutline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupOutline.storyboard; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		540386461FC56FCC007FDDF1 /* KooBeeMobile */ = {
 			isa = PBXGroup;
 			children = (
+				544030521FDF5A510040349B /* Protocols */,
 				54B53B4A1FCBB09B00FB655A /* Utils */,
 				54B53B3B1FCBADE600FB655A /* Request */,
 				54AAE95C1FCAD874004C5CB4 /* ViewModel */,
@@ -200,6 +203,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		544030521FDF5A510040349B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		54AAE95C1FCAD874004C5CB4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				54B53B4B1FCBB0AC00FB655A /* APIManager.swift */,
+				544030551FDF5AAA0040349B /* DecodableDataParser.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -348,6 +359,7 @@
 			files = (
 				54B53B4C1FCBB0AC00FB655A /* APIManager.swift in Sources */,
 				54B53B3F1FCBAE5500FB655A /* GetGroupesRequest.swift in Sources */,
+				544030561FDF5AAA0040349B /* DecodableDataParser.swift in Sources */,
 				5403865E1FC57038007FDDF1 /* GroupViewController.swift in Sources */,
 				540386711FC57761007FDDF1 /* GroupDetailViewController.swift in Sources */,
 				545FF9AF1FDD5C5D00EE2ECB /* ArticleOutlineViewController.swift in Sources */,
