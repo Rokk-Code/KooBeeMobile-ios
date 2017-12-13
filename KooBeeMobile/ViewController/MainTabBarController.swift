@@ -10,7 +10,7 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-    private let kTabNames = [ "Article","Group" , "Setting"]
+    private let kTabNames = [ "Article","Group" , "GroupCathegory"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
