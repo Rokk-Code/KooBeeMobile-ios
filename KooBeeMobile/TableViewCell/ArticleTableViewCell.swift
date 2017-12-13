@@ -57,7 +57,7 @@ class ArticleTableViewCell: UITableViewCell {
         copyLabel.attributedText = string2
  //       titleLabel.text = "[\(article.name)] \(article.copyText)"
 
-        guard let thumbUrl = URL(string: article.thumbURL) else { return }
+        guard let thumbUrl = URL(string: article.copyText ) else { return }
         thumbImage.sd_setImage(with: thumbUrl, completed: nil)
     }
     
