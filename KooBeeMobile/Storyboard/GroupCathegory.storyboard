@@ -52,14 +52,28 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YK9-e9-cmt"/>
                     </view>
-                    <navigationItem key="navigationItem" id="82e-YM-D8Y"/>
+                    <navigationItem key="navigationItem" id="82e-YM-D8Y">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="FP4-fi-Itd">
+                            <rect key="frame" x="127" y="7.5" width="121" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentTapped:" destination="xqM-vk-J4d" eventType="valueChanged" id="oqw-5G-Ujd"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="BH3-sJ-7bq" id="P3v-ri-Tg4"/>
+                        <outlet property="segmentControl" destination="FP4-fi-Itd" id="xhq-rq-GR2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKD-Hs-6E7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48.799999999999997" y="140.77961019490255"/>
+            <point key="canvasLocation" x="321" y="140"/>
         </scene>
         <!--Item-->
         <scene sceneID="Msd-Fg-9ao">

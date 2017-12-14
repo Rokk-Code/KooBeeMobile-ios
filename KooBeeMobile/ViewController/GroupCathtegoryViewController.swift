@@ -10,10 +10,11 @@ import UIKit
 
 class GroupCathtegoryViewController: UIViewController {
 
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
     let kGroupCathegories = [
+        [
         "野球",
         "サッカー",
         "テニス",
@@ -36,14 +37,36 @@ class GroupCathtegoryViewController: UIViewController {
         "アウトドア",
         "ダンス",
         "その他"
+        ], [
+            "音楽",
+            "パフォーマンス",
+            "文化",
+            "国際",
+            "社会学系",
+            "科学・工学・数学",
+            "グルメ",
+            "スポーツ観戦",
+            "旅行",
+            "ホビー",
+            "アート・カメラ",
+            "ボランティア",
+            "マスコミ",
+            "大学祭・イベント",
+            "その他"
+        ]
     ]
     
+    @IBAction func segmentTapped(_ sender: Any) {
+        collectionView.reloadData()
+    }
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         collectionView.register(UINib(nibName: "GroupCathegoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GroupCathegoryCollectionViewCell")
+        segmentControl.setTitle("運動系", forSegmentAt: 0)
+        segmentControl.setTitle("文化系", forSegmentAt: 1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,14 +92,12 @@ extension GroupCathtegoryViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return GroupCathegoryCollectionViewCell.cellSize
     }
-    
     //セルの行間
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2
     }
     // セルの横間隔
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        
         return 2
     }
     
@@ -90,14 +111,14 @@ extension GroupCathtegoryViewController: UICollectionViewDelegateFlowLayout {
 extension GroupCathtegoryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: GroupCathegoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupCathegoryCollectionViewCell", for: indexPath) as! GroupCathegoryCollectionViewCell
-
-        cell.binData(cathegoryName: kGroupCathegories[indexPath.row])
-        
+        let selectedIndex = segmentControl.selectedSegmentIndex
+        cell.binData(cathegoryName: kGroupCathegories[selectedIndex][indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return kGroupCathegories.count
+        let selectedIndex = segmentControl.selectedSegmentIndex
+        return kGroupCathegories[selectedIndex].count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -106,7 +127,8 @@ extension GroupCathtegoryViewController: UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let nextVC: GroupViewController = Utils.createViewController()
-        nextVC.searchkeyword = kGroupCathegories[indexPath.row]
+        let selectedIndex = segmentControl.selectedSegmentIndex
+        nextVC.searchkeyword = kGroupCathegories[selectedIndex][indexPath.row]
         navigationController?.pushViewController(nextVC, animated: true)
     }
 }
