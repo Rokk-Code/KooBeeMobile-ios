@@ -79,11 +79,12 @@ class GroupViewController: UIViewController {
     }
     
     private func load() {
+        
         let params: [String: Any] = [
             "limit" : 30,
             "keywords": searchkeyword ?? ""
         ]
-        viewmodel.fetchGroups(params: params)
+        viewmodel.searchGroups(params: params)
             .onSuccess { [weak self] data in
                 self?.groups = data.groups
                 self?.tableView.reloadData()
@@ -98,21 +99,21 @@ class GroupViewController: UIViewController {
     }
     
     private func loadmore() {
-        let params: [String: Any] = [
-            "limit" : 20,
-            "range" : groups.count
-        ]
-
-        viewmodel.fetchGroups(params: params)
-            .onSuccess { [weak self] data in
-                self?.groups.append(contentsOf: data.groups)
-                self?.tableView.reloadData()
-                self?.isLoading = false
-            }
-            .onFailure { [weak self] error in
-                // self?.showErrorAlert(error.localizedDescription, completion: nil
-                self?.isLoading = false
-        }
+//        let params: [String: Any] = [
+//            "limit" : 20,
+//            "range" : groups.count
+//        ]
+//
+//        viewmodel.fetchGroups(params: params)
+//            .onSuccess { [weak self] data in
+//                self?.groups.append(contentsOf: data.groups)
+//                self?.tableView.reloadData()
+//                self?.isLoading = false
+//            }
+//            .onFailure { [weak self] error in
+//                // self?.showErrorAlert(error.localizedDescription, completion: nil
+//                self?.isLoading = false
+//        }
     }
     
     fileprivate func createRefresherView() -> Refresher {

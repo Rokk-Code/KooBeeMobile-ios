@@ -18,7 +18,7 @@ class GroupCathtegoryViewController: UIViewController {
         "サッカー",
         "テニス",
         "ラクロス",
-        "ラグビー",
+        "アメフト",
         "バスケ",
         "バレー",
         "ハンドボール",
@@ -28,7 +28,7 @@ class GroupCathtegoryViewController: UIViewController {
         "ホッケー",
         "スカイスポーツ",
         "オールラウンド",
-        "武道・射的",
+        "武道・武術・射的",
         "マリンスポーツ",
         "陸上",
         "モータースポーツ",
@@ -90,7 +90,7 @@ extension GroupCathtegoryViewController: UICollectionViewDelegateFlowLayout {
 extension GroupCathtegoryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: GroupCathegoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupCathegoryCollectionViewCell", for: indexPath) as! GroupCathegoryCollectionViewCell
-        print(indexPath.row)
+
         cell.binData(cathegoryName: kGroupCathegories[indexPath.row])
         
         return cell

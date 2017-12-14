@@ -61,9 +61,12 @@ class GroupCathegoryCollectionViewCell: UICollectionViewCell {
     
     func binData(cathegoryName: String) {
         cathegoryLabel.text = "#\(cathegoryName)"
-        imageView.image = UIImage(named: cathegoryName)
-//        if let imageName = groupType(rawValue: cathegoryName)?.createIconName() {
-//            imageView.image = UIImage(named: imageName)
-//        }
+        //圧倒的応急処置、濁点とか入ってるとアセットカタログが認識しない
+        if cathegoryName.contains("ポ") || cathegoryName.contains("ド") || cathegoryName.contains("ボ") || cathegoryName.contains("バ") || cathegoryName.contains("ビ") || cathegoryName.contains("ダ") {
+           let replaced =  cathegoryName.replacingOccurrences(of: "ポ", with: "ホ").replacingOccurrences(of: "ボ", with: "ホ").replacingOccurrences(of: "ド", with: "ト").replacingOccurrences(of: "バ", with: "ハ").replacingOccurrences(of: "ビ", with: "ヒ").replacingOccurrences(of: "ダ", with: "タ")
+            imageView.image = UIImage(named: replaced)
+        } else {
+            imageView.image = UIImage(named: cathegoryName)
+        }
     }
 }
