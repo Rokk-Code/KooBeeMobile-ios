@@ -13,6 +13,8 @@ class GroupViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var searchkeyword: String?
+    
     var viewmodel = GroupViewModel()
     
     private var groups: [Group] {
@@ -79,6 +81,7 @@ class GroupViewController: UIViewController {
     private func load() {
         let params: [String: Any] = [
             "limit" : 30,
+            "keywords": searchkeyword ?? ""
         ]
         viewmodel.fetchGroups(params: params)
             .onSuccess { [weak self] data in
@@ -203,3 +206,5 @@ extension GroupViewController: UITableViewDelegate, UITableViewDataSource  {
         }
     }
 }
+
+extension GroupViewController: StoryboardLoadable {}
